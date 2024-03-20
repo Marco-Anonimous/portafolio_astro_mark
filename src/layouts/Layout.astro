@@ -1,0 +1,49 @@
+---
+// Supports weights 300-800
+import '@fontsource-variable/open-sans';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/logo2.jpg" id="favicon" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body >
+		<slot />
+	</body>
+</html>
+<style is:global>
+	
+	html {
+		font-family: 'Open Sans Variable', sans-serif;
+ 		background: #030303;
+		color: azure;
+		background-size: 224px;
+		overflow-x: hidden;
+        scroll-behavior: smooth;
+		}
+	        /* Estilos para el ícono */
+			#favicon {
+            width: 100px; /* ajusta el ancho del ícono */
+            height: auto; /* altura automática para mantener la proporción */
+        }
+		/* Estilos para la imagen */
+        .profile-img {
+            width: 200px; /* ajusta el ancho de la imagen */
+            height: auto; /* altura automática para mantener la proporción */
+            border-radius: 50%; /* bordes redondeados para crear un efecto circular */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* sombra */
+            border: 2px solid #fff; /* borde blanco */
+        }
+
+</style>
